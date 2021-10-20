@@ -230,7 +230,7 @@ void Codegen::LowerIntExpr(const Scope &scope, const IntExpr &var)
 {
   depth_ += 1;
   Emit<Opcode>(Opcode::PUSH_INT);
-  Emit<uint64_t>(var.GetValue());
+  Emit<int64_t>(var.GetValue());
 }
 
 // -----------------------------------------------------------------------------
