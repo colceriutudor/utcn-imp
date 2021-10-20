@@ -131,6 +131,7 @@ private:
   /// Lowers a function declaration.
   void LowerFuncDecl(const Scope &scope, const FuncDecl &funcDecl);
 
+  void LowerIntExpr(const Scope &scope, const IntExpr &variable);
 private:
   /// Create a new label.
   Label MakeLabel();

@@ -2,12 +2,13 @@
 
 #pragma once
 
+#include <string>
 #include <vector>
 #include <memory>
 #include <variant>
 
 
-/**
+/**s
  * Base class for all AST nodes.
  */
 class Node {
@@ -45,6 +46,7 @@ public:
     REF,
     BINARY,
     CALL,
+    INT
   };
 
 public:
@@ -73,6 +75,16 @@ public:
 private:
   /// Name of the identifier.
   std::string name_;
+};
+
+class IntExpr : public Expr {
+public:
+  IntExpr(uint64_t value): Expr(Expr::Kind::INT), value_(value){}
+
+  uint64_t GetValue() const { return value_; }
+
+private:
+  uint64_t value_;
 };
 
 /**
