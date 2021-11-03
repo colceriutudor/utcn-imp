@@ -237,7 +237,7 @@ const Token &Lexer::Next()
 // -----------------------------------------------------------------------------
 void Lexer::NextChar()
 {
-  if (is_.eof()) {
+  if (is_.eof() || is_.peek() == EOF) {
     chr_ = '\0';
   } else {
     if (chr_ == '\n') {
