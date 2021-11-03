@@ -221,7 +221,7 @@ const Token &Lexer::Next()
         return tk_ = Token::Ident(loc, word);
       }
       else if (isdigit(chr_)){
-        std::uint64_t var;
+        uint64_t var = 0;
 
         do{
           var *= 10 + (chr_ -  '0');

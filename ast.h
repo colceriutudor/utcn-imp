@@ -77,6 +77,9 @@ private:
   std::string name_;
 };
 
+/**
+ * Int expression.
+ */
 class IntExpr : public Expr {
 public:
   IntExpr(uint64_t value): Expr(Expr::Kind::INT), value_(value){}
@@ -86,6 +89,7 @@ public:
 private:
   uint64_t value_;
 };
+
 
 /**
  * Binary expression.

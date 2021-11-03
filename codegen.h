@@ -163,6 +163,8 @@ private:
   /// Emit an address or create a fixup for later.
   void EmitFixup(Label label);
 
+  void EmitInt(uint64_t var);
+
 private:
   /// Reference to the program constructed by the code generator.
   std::vector<uint8_t> code_;
